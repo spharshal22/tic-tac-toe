@@ -1,0 +1,8 @@
+import zipfile
+
+target = ['test1.zip','test2.zip','test3.zip','test4.zip','test5.zip']
+
+for x in target:
+    operation = zipfile.ZipFile(x)# read or write operation in python directory
+    operation.extractall(x[0:-4])# extracts in home directory
+    operation.close()
